@@ -41,7 +41,11 @@ WebApplication1/
    ```bash
    dotnet test
 
-6. **Run:**  
+6. **Apply Migrations (to create the database):**  
+   ```bash
+   dotnet ef database update
+
+7. **Run:**  
    ```bash
    dotnet run
 
