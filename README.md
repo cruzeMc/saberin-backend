@@ -51,9 +51,18 @@ WebApplication1/
 
 ## How to Use
 
-The API provides the following endpoints:
+**API Endpoints**  
+This API uses standard HTTP methods (GET, POST, PUT, DELETE) to interact with contact resources.
+All endpoints are relative to the base URL (e.g., https://{url}:{port}/api/contact).
+Replace {url} & {port} with the url and port your application is running on.
 
-*   **`GET`** `/api/contact?pageNumber=1&pageSize=10`: Retrieves a paginated list of contacts.
+**Swagger Documentation:**  
+This API uses Swagger/OpenAPI for interactive documentation and testing.
+After running the application, navigate to https://{url}:{port}/swagger in your browser to access the Swagger UI.
+This UI provides a comprehensive view of all available endpoints, request/response formats, and allows you to make test calls directly from the browser.
+
+**Contact Endpoints**  
+* **`GET`** `/api/contact?pageNumber=1&pageSize=10`: Retrieves a paginated list of contacts.
 *   **`GET`** `/api/contact/search?name=John&pageNumber=1&pageSize=10`: Searches for contacts by name (supports combined first and last name queries).
 *   **`GET`** `/api/contact/{id}`: Retrieves details of a specific contact.
 *   **`POST`** `/api/contact`: Creates a new contact. The request body should be in JSON with contact details (first name, last name, and address).
