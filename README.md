@@ -1,6 +1,8 @@
 ## Overview
 
-WebApplication1 is the backend API for the Contact Manager application. It exposes RESTful endpoints to perform CRUD operations on contacts and addresses. The API uses Entity Framework Core for data access, AutoMapper for model-to-DTO mapping, and ASP.NET Core for building RESTful services.
+WebApplication1 is the backend API for the Contact Manager application.
+It exposes RESTful endpoints to perform CRUD operations on contacts and addresses.
+The API uses Entity Framework Core for data access, AutoMapper for model-to-DTO mapping, and ASP.NET Core for building RESTful services.
 
 ## Folder Structure
 ```
