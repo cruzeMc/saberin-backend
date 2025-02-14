@@ -16,7 +16,7 @@ WebApplication1/
 ├── Services/
 │   └── ContactService.cs - Implements business logic for managing contacts.
 ├── appsettings.json - Contains configuration settings such as connection strings.
-└── Program.cs - The entry point that configures services and middleware.
+└── Program.cs - The entry point for the application.
 ```
 
 ## Setup Instructions
@@ -26,30 +26,27 @@ WebApplication1/
    ```bash
    git clone <repository-url>
 
-2. **Configure Database:**  
-   Configure the database by opening appsettings.json and updating the connection string under ConnectionStrings. For example, if using SQL Server:
+2. **Clone the Repository:**  
+   Clone the repository to your local machine:
    ```bash
-   "ConnectionStrings": {
-         "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=ContactManagerDb;Trusted_Connection=True;MultipleActiveResultSets=true"
-   }
+   git clone <repository-url>
+
+3. **Navigate to the root directory:**  
 
 
-3. **Restore Dependencies:**  
-   From the solution root, run 
-    ```bash
-          dotnet restore
+4. **Restore Dependencies:**  
+   ```bash
+   dotnet restore
 
-4. **Build the Project:**  
-   Navigate to the ClassLibrary1 directory and build the project:  
+5. **Build the Project:**  
    ```bash
    dotnet build
 
-5. **Run Tests:**  
-   Build the project by navigating to the WebApplication1 directory and running:
+6. **Run Tests:**  
    ```bash
    dotnet test
 
-6. **Run:**  
+7. **Run:**  
    Run the API by executing:
    ```bash
    dotnet run
@@ -61,6 +58,6 @@ The API provides the following endpoints:
 *   **`GET`** `/api/contact?pageNumber=1&pageSize=10`: Retrieves a paginated list of contacts.
 *   **`GET`** `/api/contact/search?name=John&pageNumber=1&pageSize=10`: Searches for contacts by name (supports combined first and last name queries).
 *   **`GET`** `/api/contact/{id}`: Retrieves details of a specific contact.
-*   **`POST`** `/api/contact`: Creates a new contact. The request body should be JSON with contact details (first name, last name, and addresses).
+*   **`POST`** `/api/contact`: Creates a new contact. The request body should be in JSON with contact details (first name, last name, and address).
 *   **`PUT`** `/api/contact/{id}`: Updates an existing contact. The URL ID must match the ID in the JSON body.
 *   **`DELETE`** `/api/contact/{id}`: Deletes a contact (along with its associated addresses via cascade delete).
