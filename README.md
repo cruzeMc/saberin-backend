@@ -16,38 +16,32 @@ WebApplication1/
 ├── Services/
 │   └── ContactService.cs - Implements business logic for managing contacts.
 ├── appsettings.json - Contains configuration settings such as connection strings.
-└── Program.cs - The entry point for the application.
+└── Program.cs - The entry point for running the application.
 ```
 
 ## Setup Instructions
 
 1. **Clone the Repository:**  
-   Clone the repository to your local machine:
    ```bash
    git clone <repository-url>
 
-2. **Clone the Repository:**  
-   Clone the repository to your local machine:
+2. **Navigate to the root directory:**  
    ```bash
-   git clone <repository-url>
+   cd WebApplication1
 
-3. **Navigate to the root directory:**  
-
-
-4. **Restore Dependencies:**  
+3. **Restore Dependencies:**  
    ```bash
    dotnet restore
 
-5. **Build the Project:**  
+4. **Build the Project:**  
    ```bash
    dotnet build
 
-6. **Run Tests:**  
+5. **Run Tests:**  
    ```bash
    dotnet test
 
-7. **Run:**  
-   Run the API by executing:
+6. **Run:**  
    ```bash
    dotnet run
 
