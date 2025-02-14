@@ -11,11 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Add CORS services
+var allowedOrigins = builder.Configuration["CorsSettings:AllowedOrigins"];
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazorClient", policy =>
     {
-        policy.WithOrigins("http://localhost:5000") // Blazor app URL
+        policy.WithOrigins(allowedOrigins) // Blazor app URL
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
