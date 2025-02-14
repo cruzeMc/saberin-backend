@@ -27,7 +27,7 @@ WebApplication1/
 
 2. **Navigate to the root directory:**  
    ```bash
-   cd WebApplication1
+   cd {root directory}
 
 3. **Restore Dependencies:**  
    ```bash
